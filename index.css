@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(50, 31, 50);
+}
+img{
+    width: 50px;
+    margin-left: 30px;
+}
+#navbar{
+    display: flex;
+    width: 100%;
+    border: 1px solid red;
+    justify-content: space-around;
+    align-items: center;
+}
+h3{
+    color: white;
+    text-decoration: none;
+    
+}
+#navbar>#nav1{
+    border: 1px solid teal;
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right:350px;
+    
+}
+#nav1+#nav2{
+    width: 40%;
+    border: 1px solid blue;
+}
+button{
+    margin-left: 40px;
+    font-size: 14px;
+    height: 33px;
+    width: auto;  
+}
+
+#btn1{
+    color: white;
+    background-color: rgb(50, 31, 50);
+    border-color: white;
+    border-radius: 5px;
+    padding:auto;
+    cursor: pointer;
+}
+#btn2{
+    color: white;
+    background-color: rgb(134, 64, 134);
+    border-radius: 5px;
+    border-color: transparent;
+    cursor: pointer;    
+}
+input,textarea{
+    width: 47%;
+    height: 40px;
+    background-color: rgba(100px, 100px, 100px, 0.5px);
+    border-radius: 5px;
+    
+}
+ /* CROUSER  */
+
+#crouserMain{
+    border:  1px solid white;
+    padding: 10PX;
+}
+
+#crouser{
+    border:  1px solid blue;
+    margin-top: 20px;
+    width: 95%;
+    height: 400px;
+    justify-content: center;
+}
