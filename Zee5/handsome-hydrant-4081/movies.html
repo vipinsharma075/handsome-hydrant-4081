@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <style>
+        body{
+    background-color: rgb(15,6,23);
+}
+img{
+    width: 50px;
+    margin-left: 30px;
+}
+#navbar{
+    display: flex;
+    width: 100%;
+    background-color: rgb(15,6,23);
+    justify-content: space-around;
+    text-decoration: none;
+    align-items: center;
+    position:sticky;
+    top: 0;
+    /* box-shadow: rgba(158, 158, 176, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
+}
+h3{
+    color: white;
+    text-decoration: none;
+    
+}
+#navbar>#nav1{
+    width: 300px;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right:350px;
+    
+    
+}
+#nav1+#nav2{
+    width: 40%;
+    
+}
+button{
+    margin-left: 40px;
+    font-size: 14px;
+    height: 33px;
+    width: auto;  
+}
+
+#btn1{
+    color: white;
+    background-color: rgb(15,6,23);
+    border-color: white;
+    border-radius: 5px;
+    padding:auto;
+    cursor: pointer;
+}
+#btn2{
+    color: white;
+    background-color: rgb(134, 64, 134);
+    border-radius: 5px;
+    border-color: transparent;
+    cursor: pointer;    
+}
+input,textarea{
+    width: 47%;
+    height: 40px;
+    background-color: rgba(100px, 100px, 100px, 0.5px);
+    border-radius: 5px;
+    
+}
+ /* CROUSER  */
+
+#crauserMain{
+    width: 95%;
+    height: 370px;
+    border:  1px solid red;
+    margin: 40PX auto;
+}
+
+#crauser{
+    border:  1px solid blue;
+    width: 100%;
+    height: 370px;
+    margin: auto;
+}
+
+#left-btn{
+    position: absolute;
+    border-color: transparent;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(100, 100, 100,0);
+    top: 38%;
+    cursor: pointer;
+}
+#right-btn{
+    position: absolute;
+    background-color: rgba(100, 100, 100, 0);
+    border-color: transparent;
+    color: white;
+    font-size: 30px;
+    top: 38%;
+    left: 89%;
+    cursor: pointer;
+}
+
+/* top10InIndia */
+
+#ZeeTVShows{
+    display: grid;
+    border:  1px solid blue;
+    grid-template-columns: repeat(10,200px);
+    gap: 10px;
+    
+}
+
+#ZeeTVShows>div>img{
+    border:  1px solid teal; 
+    width: 100%;
+    border-radius: 10px;
+}
+#top10Css{
+    color: white;
+    margin-left: 40px;
+}
+
+#top10InIndiaButtonLeft{
+    position: absolute;
+    border-color: transparent;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(100, 100, 100,0);
+    top:  108%;
+    cursor: pointer;
+}
+#top10InIndiaButtonRight{
+    position: absolute;
+    background-color: rgba(100, 100, 100, 0);
+    border-color: transparent;
+    color: white;
+    font-size: 30px;
+    top: 108%;
+    left: 89%;
+    cursor: pointer;
+}
+
+
+/* latestMovies */
+
+#PopularFreeShowsonZEE5{
+    display: grid;
+    border:  1px solid blue;
+    grid-template-columns: repeat(15,200px);
+    gap: 10px;
+}
+ #PopularFreeShowsonZEE5>div>img{
+    border:  1px solid teal; 
+    width: 100%;
+    border-radius: 10px;
+}
+#latestMoviesLeft{
+    position: absolute;
+    border-color: transparent;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(100, 100, 100,0);
+    top:  168%;
+    cursor: pointer;
+}
+#latestMoviesRight{
+    position: absolute;
+    background-color: rgba(100, 100, 100, 0);
+    border-color: transparent;
+    color: white;
+    font-size: 30px;
+    top: 168%;
+    left: 89%;
+    cursor: pointer;
+} 
+
+/* latestHindiEpisodesFree */
+
+#latestHindiEpisodesFree{
+    display: grid;
+    border:  1px solid blue;
+    grid-template-columns: repeat(15,200px);
+    gap: 10px;
+    
+}
+ #latestHindiEpisodesFree>div>img{
+    border:  1px solid teal; 
+    width: 100%;
+    border-radius: 10px;
+}
+#latestHindiEpisodesFree>div>h3{
+    
+    text-align: center;
+    font-size: 15px;
+    margin-left: 40px;
+}
+#latestHindiEpisodesFreeLeft{
+    position: absolute;
+    border-color: transparent;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(100, 100, 100,0);
+    top:217%;
+    cursor: pointer;
+}
+#latestHindiEpisodesFreeRight{
+    position: absolute;
+    background-color: rgba(100, 100, 100, 0);
+    border-color: transparent;
+    color: white;
+    font-size: 30px;
+    top: 217%;
+    left: 89%;
+    cursor: pointer;
+} 
+
+
+
+/* WatchAgainExclusivelyonZEE5 */
+
+#WatchAgainExclusivelyonZEE5{
+    display: grid;
+    border:  1px solid blue;
+    grid-template-columns: repeat(12,200px);
+    gap: 10px;
+}
+ #WatchAgainExclusivelyonZEE5>div>img{
+    border:  1px solid teal; 
+    width: 100%;
+    border-radius: 10px;
+}
+#ZEE5OriginalWebSeriesLeft{
+    position: absolute;
+    border-color: transparent;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(100, 100, 100,0);
+    top:  230%;
+    cursor: pointer;
+}
+#ZEE5OriginalWebSeriesRight{
+    position: absolute;
+    background-color: rgba(100, 100, 100, 0);
+    border-color: transparent;
+    color: white;
+    font-size: 30px;
+    top: 230%;
+    left: 89%;
+    cursor: pointer;
+} 
+
+/* AndTV */
+
+#AndTV{
+    display: grid;
+    border:  1px solid blue;
+    grid-template-columns: repeat(12,200px);
+    gap: 10px;
+}
+ #AndTV>div>img{
+    border:  1px solid teal; 
+    width: 100%;
+    border-radius: 10px;
+}
+#HindiDubbedMoviesLeft{
+    position: absolute;
+    border-color: transparent;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(100, 100, 100,0);
+    top:  300%;
+    cursor: pointer;
+}
+#HindiDubbedMoviesRight{
+    position: absolute;
+    background-color: rgba(100, 100, 100, 0);
+    border-color: transparent;
+    color: white;
+    font-size: 30px;
+    top:290%;
+    left: 89%;
+    cursor: pointer;
+} 
+
+/* ZEEPLEXMoviesOnZEE5 */
+
+#zEEPLEXMoviesOnZEE5{
+    display: grid;
+    border:  1px solid blue;
+    grid-template-columns: repeat(6,45%);
+    gap: 10px;
+}
+#zEEPLEXMoviesOnZEE5>div>img{
+    border:  1px solid teal; 
+    width: 100%;
+    border-radius: 10px;
+}
+#zEEPLEXMoviesOnZEE5Left{
+    position: absolute;
+    border-color: transparent;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(100, 100, 100,0);
+    top:  360%;
+    cursor: pointer;
+}
+#zEEPLEXMoviesOnZEE5Right{
+    position: absolute;
+    background-color: rgba(100, 100, 100, 0);
+    border-color: transparent;
+    color: white;
+    font-size: 30px;
+    top: 350%;
+    left: 89%;
+    cursor: pointer;
+}
+#downloadApp{
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+}
+#downloadAppIstDiv{
+    width: 20%;
+    margin:27px 350px 60px 0px;
+    
+}
+#downloadAppIstDiv>a>img{
+    width: 90px;
+}
+.downloadh2{
+    font-size: 20px;
+    margin-top: 30px;
+    color: white;
+}
+.socialMediaLogo{
+    margin-top: 15px;
+    
+}
+.socialMediaLogo>img{
+    border-radius: 2000px;
+
+}
+.socialMediaLogo2>a>img{
+    margin-top: 25px;
+    border-radius: 10000px;
+    width: 30px;
+    height: 30px;
+    
+}
+
+/* contacts */
+#contacts{
+    display:grid;
+    grid-template-columns: repeat(4,100px);
+    gap: 20px;
+    margin-left: 60px;
+    
+}
+#contacts>div>a{
+   color: white;
+   text-decoration: none;
+    
+}
+
+/* footer */
+
+#footer{
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+    margin-top: 20px;
+    
+}
+#footer>div{
+    margin: auto;
+}
+.white{
+    color: white;
+    
+}
+.grey{
+    color: rgb(106, 102, 102);
+}
+#lastLine{
+    width: 45%;
+    margin-top: 50px;
+    line-height: 20px;
+    color: rgb(106, 102, 102);
+    margin-left: 60px;
+}
+    </style>
+   
+</head>
+<body>
+    <div id="navbar" >
+        <img src="https://www.zee5.com/images/ZEE5_logo.svg?ver=2.52.15" alt="ZEE5_logo">
+        <div id="nav1" >
+            <a href="home.html"><h3>HOME</h3></a>
+            <a href="tvShows.html"><h3>TV Shows</h3></a>
+            <a href="movies.html"><h3>Movies</h3></a>
+        </div>
+        <div id="nav2">
+            <input type="text" placeholder="Search for Movies,Shows Channels etc." >
+            <a href="login.html"><button id="btn1">LOGIN</button></a>
+            <a href="buyPlan.html"><button id="btn2" >BUY PLAN</button></a>
+
+        </div>
+    </div>
+    <div id="crauserMain" >
+        <img id="crauser" src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z5133458/cover/1920x77060dd64aa6ef748f48bbdf4951a1f6af7b51352ca11794ad79904fded999459e7.jpg" alt="Error">
+    </div>
+    <button id="left-btn"><</button>
+    <button id="right-btn">></button>
+    <h1 id="top10Css" >Only On ZEE5</h1>
+    <div id="ZeeTVShows" >
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5177236/portrait/1920x770c10a267e362144ae9a8d5c60199fd633.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5133622/portrait/1920x7705ef1215cc2984b548b3356566bf54c3d712772e37d5341fe9df182c9f5732ecf.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5133458/portrait/1920x77060dd64aa6ef748f48bbdf4951a1f6af7b51352ca11794ad79904fded999459e7.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5168144/portrait/1920x7709b5906f9ab1347e7915762097af21c2e.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5145103/portrait/1920x770189f07ded33c4436b6d1796409308f04.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5148935/portrait/1920x770345aac620b1b4b0188b9b4cbad67f485.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5146416/portrait/1920x77030295e51fe54452d8c85e76c5ec756e892b2b3c05ed24c43919a4293fbe8344b.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5168593/portrait/1920x770d32fb5a532b54f718e18d08ae5bfe599.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-101-10z5145273/portrait/1920x770681eb40058c046b7927bea554484d07f.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5161064/portrait/1920x770141bcd9ccf9945d490a7935a3cc311069180d7d5e4c248279410203ac82bc67d.jpg" alt="">
+        </div>
+
+    </div>
+    <button id="top10InIndiaButtonLeft" ><</button>
+    <button id="top10InIndiaButtonRight" >></button>
+    <h1 id="top10Css" >ZEE5 Original Blockbusters</h1>
+    <div id="PopularFreeShowsonZEE5" >
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-178543/portrait/00178543incov1695131742.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-159148/portrait/00159148incover.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-296370/portrait/1920x770056ba2ae2b59429fbbc45f002f0bcf9c43a75de3954a4001ad153625dbbd5081.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z51134/portrait/1920x7705ba0721ce7f4418aa2eb3de2c6863c90.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z51560/portrait/1920x770087ff5f6d15f44f98b6a27adc7130aac.jpg"alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z51198/portrait/1920x770a02410f0ba6b487cb2b2309deaff5751.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-369273/portrait/1920x7707c47b251e254462c80266717d90ba9be.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z51248/portrait/1920x770cac95b31db724e7eae3dd3401aad05a2.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z513117/portrait/1920x770478c174d17894ab79a63d72e6b02a830d72d7d1a03fc4037a8b321b5519c5a8e.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z544916/portrait/1920x770141dcb00909443ec8d04dbc10d8e7f6c944beb98e417497b944a409681c374c0.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z595840/portrait/1920x770e7d51316ea6740c39197181f81575868.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-178543/portrait/00178543incov1695131742.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-251089/portrait/00251089incov1342976676.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z51134/portrait/1920x7705ba0721ce7f4418aa2eb3de2c6863c90.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z51560/portrait/1920x770087ff5f6d15f44f98b6a27adc7130aac.jpg" alt="">
+        </div>
+    </div>
+     <!-- <div id="crauser2LatestMovies" >
+        <img id="crauser2" src="https://akamaividz2.zee5.com/image/upload/w_899,h_506,c_scale,f_webp,q_auto:eco/resources/0-0-1z5177236/app_cover/1170x658withlogobc8d428135c845adb5e2fbe837cc51d9_free.jpg" alt="Error">
+    </div> -->
+    <button id="latestMoviesLeft" ><</button>
+    <button id="latestMoviesRight" >></button>
+    <!-- <h1 id="top10Css" >Latest Hindi Episodes Free</h1>
+    <div id="latestHindiEpisodesFree" >
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5183430/list/000002492d025ea681e848db9579cdc459bb65e5.jpg" alt="">
+            <h3>Bhagya Lakshmi</h3>
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5183328/list/00000101a840c45ee8294d1da737c1ad4740fdf1.jpg" alt="">
+            <h3>Kundali Bhagya</h3>
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5183357/list/000001866d83a296c36f40bb92f01fd1f5fb261f.jpg" alt="">
+            <h3>Mithai</h3>
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5183344/list/00000233ee4c86ef70ca4153aaa2914de5333c81.jpg" alt="">
+            <h3>Meet</h3>
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5183476/list/00000178c67c59bfff6f4a6a966f2c99c679d9b6.jpg" alt="">
+            <h3>Tere Bina Jiya Jaye Na</h3>
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5183435/list/00000022a91feb43877c48a6b299fc99b5606cb5.jpg" alt="">
+            <H3>KumKum Bhagya</H3>
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5183199/list/00000059432cb4fefab54ee98fb57104f40f10f3.jpg" alt="">
+            <h3>Bhabi Ji Ghar par Hai!</h3>
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5183227/list/000001859251bee1dd3647fba279b549291b6e1f.jpg" alt="">
+            <h3>Baal Shiv</h3>
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5183177/list/000001490723335ffab2433e92bcb854884ecfb4.jpg" alt="">
+            <h3>Happu Ki Ultan Paltan</h3>
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco/resources/0-1-6z5183424/list/00000211aa3ed20a2ebd42899226acff293b27c4.jpg" alt="">
+            <h3>Lakshmi Bai</h3>
+        </div>
+    </div>
+    <button id="latestHindiEpisodesFreeLeft" ><</button>
+    <button id="latestHindiEpisodesFreeRight" >></button>
+     -->
+
+<!-- Watch Again Exclusively on ZEE5 -->
+    <h1 id="top10Css" >Premium Bollywood Blockbusters</h1>
+
+<div id="WatchAgainExclusivelyonZEE5" >
+    <div>
+        <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-2418/portrait/002418cover1278794152.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-73415/portrait/1920x770546cc83b519e4088b6f0bec6cdd6e7d275cce518f27e420ea676dda625c6b0d3.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-260877/portrait/1920x770b54df793bd114abda9ca8762f7ae293e.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-307715/portrait/00307715incov1533673836.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-105985/portrait/rockstarhi1920x770.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-2539/portrait/tamasha1920x770cdb0783ecd574efb92ad5031c8a2c8e5.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-2539/portrait/tamasha1920x770cdb0783ecd574efb92ad5031c8a2c8e5.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-2539/portrait/tamasha1920x770cdb0783ecd574efb92ad5031c8a2c8e5.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-2539/portrait/tamasha1920x770cdb0783ecd574efb92ad5031c8a2c8e5.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-6728/portrait/006728incover12314315123104ac0c30c9504cd28e37143696169d67.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-33204/portrait/1920x7703503ae621e77472380267408e9a0ad90.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-360780/portrait/00360780incov19104135101910ba9d459f4fe1431d8abd54a9800dd03b.jpg" alt="">
+    </div>
+</div>
+    <button id="ZEE5OriginalWebSeriesLeft"><</button>
+    <button id="ZEE5OriginalWebSeriesRight">></button>
+
+    
+    <!-- &TV Shows -->
+    <h1 id="top10Css" >Hindi Dubbed Movies</h1>
+    <div id="AndTV" >
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-movie_466418637/portrait/1920x770bd16a42c2fd7485db6672b48cb8b435e.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5168593/portrait/1920x770d32fb5a532b54f718e18d08ae5bfe599.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-348372/portrait/1920x77041f91aea29de44daa6ab065a1f6a6c53.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5156101/portrait/1920x7702f5c1d7a0eee45bdbdd6f473c9f51fe8.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5117565/portrait/1920x7708e744fbdcb554e54a1036108a0832ebf.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-movie_1803765767/portrait/TimeStory1920x7702e3b15ada92d419d95ef0d15a7919a63.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-149834/portrait/1920x7702018404691.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-2535/portrait/1920x77039312dfd388843bb8347d3b389561888.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-3502/portrait/1920x77096c3c9d32c6946bb933bef0e7463b7af.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5130773/portrait/1920x7708e0b2f3ad3bb45b8be8b3073d20fb1aa.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-3044/portrait/063044incover98740071191a4d21bb818ea29d68541e.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-2356/portrait/1920x770ffdfc616c75840cf95545cd67e3476d6e2fb2ce4623c4ebaa29b36ba97edf983.jpg" alt="">
+        </div>
+    </div>
+    </div>
+        <button id="HindiDubbedMoviesLeft" ><p</button>
+        <button id="HindiDubbedMoviesRight" >></button>
+
+        <!-- ZEEPLEX Movies on ZEE5 -->
+        <h1 id="top10Css" >ZEEPLEX Movies on ZEE5</h1>
+        <div id="zEEPLEXMoviesOnZEE5" >
+            <div>
+                <img src="https://akamaividz2.zee5.com/image/upload/w_508,h_286,c_scale,f_webp,q_auto:eco/resources/0-0-1z5185726/list/ImageTitle0bebe5f9a27b43b18f6413ac8bd90dd0.jpg" alt="">
+            </div>
+            <div>
+                <img src="https://akamaividz2.zee5.com/image/upload/w_508,h_286,c_scale,f_webp,q_auto:eco/resources/0-0-1z5129922/list/1170x658withlogo701cc5dc002b483091c6b4d911f838d2.jpg" alt="">
+            </div>
+            <div>
+                <img src="https://akamaividz2.zee5.com/image/upload/w_508,h_286,c_scale,f_webp,q_auto:eco/resources/0-0-1z5145156/list/1170x658withlogo3c6e5969c9c444959196415fd1f89634.jpg" alt="">
+            </div>
+            <div>
+                <img src="https://akamaividz2.zee5.com/image/upload/w_508,h_286,c_scale,f_webp,q_auto:eco/resources/0-0-1z5163808/list/1170x658withlogod370ccdc2dfd40a4b74039ffc25ad23b.jpg" alt="">
+            </div>
+            <div>
+                <img src="https://akamaividz2.zee5.com/image/upload/w_508,h_286,c_scale,f_webp,q_auto:eco/resources/0-0-1z5163547/list/ImageTitle6eab80ad9d8341b9b015e67a76707272.jpg" alt="">
+            </div>
+            <div>
+                <img src="https://akamaividz2.zee5.com/image/upload/w_508,h_286,c_scale,f_webp,q_auto:eco/resources/0-0-1z5149871/list/1170x658withlogoe80a47088e1c49cd88b6758d863f12f3.jpg" alt="">
+            </div>
+        </div>
+        <button id="zEEPLEXMoviesOnZEE5Left"><p</button>
+        <button id="zEEPLEXMoviesOnZEE5Right" >></button>
+        <div id="downloadApp">
+            <h2 class="downloadh2" >Download Apps</h2>
+            <div id="downloadAppIstDiv" >
+                <a href="https://play.google.com/store/apps/details?id=com.graymatrix.did"><img src="https://www.zee5.com/images/play_store.png?ver=2.52.17" alt="playstore"></a>
+                <a href="https://apps.apple.com/in/app/zee5-shows-live-tv-movies/id743691886"><img src="https://www.zee5.com/images/app_store.png?ver=2.52.17" alt="appleAppStore"></a>
+            </div>
+
+            <p class="downloadh2" >Connect with us</p>
+
+              <div class="socialMediaLogo2" >
+                <a href="https://www.facebook.com/ZEE5/"><img src="data:image/png;base64,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" alt="facebooklogo"></a>
+                <a href="https://www.instagram.com/zee5/"><img src="data:image/jpeg;base64,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" alt=""></a>
+                <a href="https://twitter.com/zee5india"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqIou49DhfS1sJ-pBMhaKWSzDHc_ysr0K2tg&usqp=CAU" alt=""></a>
+                <a href="https://www.youtube.com/channel/UCXOgAl4w-FQero1ERbGHpXQ"><img src="data:image/png;base64,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" alt=""></a>
+                
+              </div>
+        </div>
+
+        <div id="contacts" >
+            <div>
+                <a href="about.html"><p>About Us</p></a>
+            </div>
+            <div>
+                <a href="helpcenter.html"><p>Help Center</p></a>
+            </div>
+            <div>
+                <a href="privacy.html"><p>Privacy Policy</p></a>
+            </div>
+            <div>
+                <a href="termsOfuse.html"><p>Terms of Use</p></a>
+            </div>
+        </div>
+<!-- footer -->
+
+<div id="footer" >
+    <div>
+        <h4 class="white" >Popular TV Shows</h4>
+    </div>
+    <div>
+        <h4 class="white" >Premium Movies</h4>
+    </div>
+    <div>
+        <h4 class="white" >Popular Live TV Channel</h4>
+    </div>
+    <div>
+        <h4 class="white">Popular web series</h4>
+    </div>
+    <div>
+        <h4 class="white">Bollywood Top Celebrities</h4>
+    </div>
+    <div>
+        <p class="grey" >KumKum Bhagya</p>
+    </div>
+    <div>
+        <p class="grey" >Kya Meri Sonam Gupta Bewafa Hai?</p>
+    </div>
+    <div>
+        <p class="grey" >Aaj Tak</p>
+    </div>
+    <div>
+        <p class="grey">Sunflower</p>
+    </div>
+    <div>
+        <p class="grey">Sunny Leone</p>
+    </div>
+    <div>
+        <p class="grey">Kundali Bhagya</p>
+    </div>
+    <div>
+        <p class="grey">Helmet</p>
+    </div>
+    <div>
+        <p class="grey">Zee News</p>
+    </div>
+    <div>
+        <p class="grey">Jeet Ki Zid</p>
+    </div>
+    <div>
+        <p class="grey">Disha Patni</p>
+    </div>
+    <div>
+        <p class="grey">Bhagya Lakshmi</p>
+    </div>
+    <div>
+        <p class="grey">200 Halla Ho</p>
+    </div>
+    <div>
+        <p class="grey">Zee TV HD</p>
+    </div>
+    <div>
+        <p class="grey">Bicchoo Ka Khel</p>
+    </div>
+    <div>
+        <p class="grey">Deepika Padukone</p>
+    </div>
+    <div>
+        <p class="grey">Tujhse Hai Rabta</p>
+    </div>
+    <div>
+        <p class="grey">14 Ferre</p>
+    </div>
+    <div>
+        <p class="grey">&TV HD</p>
+    </div>
+    <div>
+        <p class="grey">State of siege 26/11</p>
+    </div>
+    <div>
+        <p class="grey">Salman Khan</p>
+    </div>
+    <div>
+        <p class="grey">Zindagi pal pal ki</p>
+    </div>
+    <div>
+        <p class="grey">Dial 100</p>
+    </div>
+    <div>
+        <p class="grey">Zee Marathi</p>
+    </div>
+    <div>
+        <p class="grey">Soorveer</p>
+    </div>
+    <div>
+        <p class="grey">Nora Fatehi</p>
+    </div>
+</div>
+
+<p id="lastLine" >Best viewed on Google Chrome 80+, Microsoft Edge 81+, Mozilla Firefox 75+, Safari 5.1.5+
+    Copyright © 2022 Zee Entertainment Enterprises Ltd. All rights reserved</p>
+
+</body>
+<script>
+    let imagesLink=[
+    "https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z5149852/cover/1920x77021ec1afd9d0243d4af86c516ecd3985c.jpg",
+    "https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-movie_1675722314/cover/mainterahero16th1920x770d3a5243857e942249ef297785c7b2dfc.jpg",
+    "https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z5168144/cover/1920x7709b5906f9ab1347e7915762097af21c2e.jpg",
+    "https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z5161064/cover/1920x770141bcd9ccf9945d490a7935a3cc311069180d7d5e4c248279410203ac82bc67d.jpg",
+    "https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z5146416/cover/1920x77030295e51fe54452d8c85e76c5ec756e892b2b3c05ed24c43919a4293fbe8344b.jpg",
+    "https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z5177236/cover/1920x770c10a267e362144ae9a8d5c60199fd633.jpg"
+    
+]
+let leftbtn=document.querySelector("#left-btn");
+let rightbtn=document.querySelector("#right-btn");
+let crauser=document.querySelector("#crauser");
+
+let imageState=0;
+rightbtn.addEventListener("click",function(){
+    imageState++;
+    if(imageState===imagesLink.length){
+        imageState=0;
+    }
+    crauser.src=imagesLink[imageState];
+});
+leftbtn.addEventListener("click",function(){
+    imageState--;
+    if(imageState<0){
+        imageState=imagesLink.length-1;
+    }
+    crauser.src=imagesLink[imageState];
+});
+</script>
+</html>
