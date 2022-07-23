@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+          background-color: rgb(15,6,23);;
+        }
+        p{
+        color: white;
+        /* border:  1px solid red; */
+        text-align: center;
+        font-family: NotoSansRegular,sans-serif;
+      }
+      img{
+        display: block;
+
+      }
+      #logo{
+        display: flex;
+        /* border:  1px solid red; */
+        justify-content: center;
+        justify-content: space-evenly;
+      }
+     
+      form{
+        width: 100%;
+        margin: auto;
+      }
+      #or{
+        width: 12%;
+        /* border:  1px solid red; */
+        background-color: rgb(15,6,23);
+        border-radius: 100%;
+        text-align: center;
+        font-size: 15px;
+        display: block;
+        margin: auto;
+        margin-top: 25px;
+        padding: 12px 0px 12px 0px;
+      }
+        button{
+     width: 100%;
+     /* border:  1px solid red; */
+     display: block;
+     margin: auto;
+     margin-top: 25px;
+     background-color: teal;
+     border-radius: 7px;
+     font-size: 18px;
+     padding: 8px 0px 8px 0px;
+     cursor: pointer;
+   }
+   #main{
+        width: 20%;
+        margin: auto;
+        margin-top: 100px;
+      }
+   #sign{
+    font-size: 18px;
+   }
+   input{
+        width: 100%;
+        /* border:  1px solid red; */
+        height: 25px;
+        margin-top: 30px;
+        background-color: transparent;
+        border: 0px ;
+        border-bottom: 1px  solid#87838b;
+        color: white;
+      }
+      a{
+        text-decoration: none;
+        /* border:  1px solid red; */
+        color:violet;
+        font-size: 15px;
+      }
+      p:nth-child(2){
+        color:white;
+        /* border:  1px solid red; */
+        font-weight:100;
+        margin-bottom: 40px;
+      }
+      p:first-child{
+        font-weight: bold;
+      }
+      p:nth-child(1){
+        margin-bottom: 30px;
+      }
+  
+    </style>
+</head>
+<body>
+    <div id="main">
+      <form id="form1"> 
+    <p>Login to ZEE5</p>
+    <p>Login to continue enjoying uninterrupted video and personalised experience.</p>
+   <div id="logo">
+    <a href=""><img src="https://www.zee5.com/images/apple-social-icon-circle.svg?ver=2.51.66" alt="error"></a>
+    <a href=""><img src="https://www.zee5.com/images/google-social-icon-circle.svg?ver=2.51.66" alt="error"></a>
+    <a href=""><img src="https://www.zee5.com/images/fb-social-icon-circle.svg?ver=2.51.66" alt="error"></a>
+    <a href=""><img src="https://www.zee5.com/images/twitter-social-icon.svg?ver=2.51.66" alt="error"></a>
+</div>  
+<p id="or">or</p>
+<input id="email" type="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+
+
+ <p id="term"><span> <a href="">Forgot Password?</a></span></p>
+ <button id="login1">Login</button>
+ <p id="sign">New to ZEE5 ? <a href="sign_up.html">Register</a></p>
+         
+</form>
+      </div>
+
+</body>
+</html>
+
+<script>
+  let form=document.querySelector("form");
+  let userdata=JSON.parse(localStorage.getItem("userdata"))|| []
+  form.addEventListener("submit", function(event){
+           event.preventDefault();
+      let data={
+          email:form.email.value,
+          password:form.password.value
+      }
+      if(logincheck(data.email,data.password)==true){
+         localStorage.setItem("login",JSON.stringify(data));
+         alert("Login Successfully");
+         window.location.href = 'index.html';
+      } else{
+          alert("Wrong Username or password")
+      }
+  })
+  
+  
+  function logincheck(email,password){
+  let filtered=userdata.filter(function(elem){
+      return elem.email===email && elem.password===password;
+      
+  })
+  if(filtered.length>0){
+      return true;
+  } else{
+      return false;
+  }
+  }
+  </script>
